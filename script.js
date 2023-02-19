@@ -90,16 +90,6 @@ function showImages() {
       "k5/45.png",
       "k5/46.png",
       "k5/47.png",
-      "k5/48.png",
-      "k5/40.png",
-      "k5/41.png",
-      "k5/42.png",
-      "k5/43.png",
-      "k5/44.png",
-      "k5/45.png",
-      "k5/46.png",
-      "k5/47.png",
-      "k5/48.png",
 
       "k6/49.png",
       "k6/50.png",
@@ -326,15 +316,104 @@ function showRandomCharacter() {
   document.getElementById("character-container").appendChild(imgElement);
 }
 
+function spel() {
+  // overlay görünür hale getir
+
+
+  // image-container görünür hale getir
+  document.getElementById("spel-container").style.display = "block";
+
+  // 6 kategorideki resimler
+  const images = [
+    "spel/k1/1.png",
+    "spel/k1/2.png",
+    "spel/k1/3.png",
+    "spel/k1/4.png",
+    "spel/k1/5.png",
+
+    "spel/k2/1.png",
+    "spel/k2/2.png",
+    "spel/k2/3.png",
+    "spel/k2/4.png",
+    "spel/k2/5.png",
+
+
+  ];
+
+  const selectedImages = [];
+
+  // 7 kategoriden her birinden rastgele bir resim seç
+  for (let i = 0; i < 2; i++) {
+    const categoryImages = images.filter((image) => image.includes(`k${i+1}`));
+    const selectedImage = categoryImages[Math.floor(Math.random() * categoryImages.length)];
+    selectedImages.push(selectedImage);
+  }
+
+
+  // rastgele 6 resmi ekle
+  for (let i = 0; i < 2; i++) {
+    const imgElement = document.createElement("img");
+    imgElement.src = selectedImages[i % 2];
+    document.getElementById("spel-container").appendChild(imgElement);
+  }
+}
+
 
 
 function temizle() {
   var container1 = document.getElementById("character-container");
   var container2 = document.getElementById("image-container");
+  var container3 = document.getElementById("spel-container");
   
-  if (container1 && container2) {
+  if (container1 && container2 && container3) {
     container1.innerHTML = "";
     container2.innerHTML = "";
+    container3.innerHTML = "";
   }
 }
 
+let isCardOpen = false;
+
+function buttonClicked() {
+  if (!isCardOpen) {
+    showRandomCharacter();
+    showImages();
+    spel();
+    isCardOpen = true;
+  } else {
+    temizle();
+    isCardOpen = false;
+  }
+}
+
+document.getElementById("random-build-button").addEventListener("click", buttonClicked);
+
+
+const descriptions = [
+ " Benimki. Yaşam bir döngüden ibaret biz yaşarız onlar ölür. -Nasus",
+ " Bu son yürüyüşüm.  -Graves",
+ " Ne oldu kıç üstü oturdun mu ? -Tristana",
+ " Ben üst kumandan, hep general, üst kıdemli, 4 yıldızlı, topçu birliği, amiral çavuşu Kled. Ben emir verdim mi itaat edeceksin! -Kled.",
+ " Gelenekler bilgeliği öldürür. -Zed",
+ " Tamam. -Rammus",
+ " Bir varım, bir yokum. -Shaco",
+ " Aşk herşeyi mahveder. -Viego",
+ " AAADAAAAAĞĞĞLEETTT. -Garen",
+ " Neden bu kadar ciddisin? -Shaco",
+ " Vaaza hiç gerek yok, kırık kemiklerin verdiği ders unutulmaz. -Illaoi",
+ " Hah! Tabanca ile kılıç, baklavayla şerbet gibi gidiyor. -Samira",
+ " Kir ve çamurdan yükseldim, ben bataklıkta açan bir çiçeğim, ben güzelliğin ta kendisiyim. -Jhin",
+ " Onur, Adalet, Gelenek. Hepsi Cahiller için birer pranga. -Sylas",
+ " Bakmaya tenezzül etmiyorum diye, seni görmediğimi zannetme. -Thresh",
+ " Dans edecekler, şarkı söyleyecekler, can verecekler. -Jhin",
+ " Nihayet, gösteri başlıyor. -Jhin",
+ " Sisin ötesinde beni bekliyor. Kraliçem, aşkım, kırık kalbimin sahibi. -Viego",
+ " Barış en büyük yalan. -Aarox",
+ " Barış en büyük yalan. -Akali"  
+
+
+];
+
+const description = document.getElementById("random-description");
+const randomIndex = Math.floor(Math.random() * descriptions.length);
+description.textContent = descriptions[randomIndex];

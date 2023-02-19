@@ -1,21 +1,72 @@
-
 body {
-  background-image: url('https://picsum.photos/seed/picsum/1920/1080'); /* arka plan resmi */
-  background-size: cover; /* arka plan resminin boyutunu sayfaya göre ayarla */
-  background-position: center; /* arka plan resminin konumunu ayarla */
-  background-repeat: no-repeat; /* arka plan resminin tekrarlanmasını önle */
-  background-color: rgba(0, 0, 0, 0.5); /* arka plan rengini ayarla */
+  background-image: url("https://picsum.photos/seed/picsum/1920/1080/");
+  background-size: cover;
+  background-position: center;
 }
 
-* {
-  zoom: 95%;
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-
-.modal-backdrop {
-  zoom: 200%;
+#frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #e5d99c;
+  border-radius: 20px;
+  background-color: #1c2026;
+  width: 600px;
+  height: 400px;
 }
 
-.fade-show {
-  zoom: 1%;
+#character-container {
+  border-radius: 50%;
+  background-color: #3366cc;
+  width: 150px;
+  height: 150px;
+  margin-left: 30px;
+  margin-top: -180px;
+}
+
+#image-container {
+  background-color: #e5d99c;
+  width: 220px;
+  height: 150px;
+  margin-left: 40px;
+  margin-top: -180px;
+}
+
+#spel-container {
+  background-color: #e5d99c;
+  width: 82px;
+  height: 150px;
+  margin-left: 20px;
+  margin-top: -180px;
+}
+
+#character-container img {
+  width: 150px;
+  height: 150px;
+  margin-top: 0px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#image-container img {
+  width: 64px;
+  height: 64px;
+  margin-left: 7px;
+  margin-top: 7px;
+  object-fit: cover;
+}
+
+#spel-container img {
+  width: 64px;
+  height: 64px;
+  margin-left: 8px;
+  margin-top: 7px;
+  object-fit: cover;
 }
