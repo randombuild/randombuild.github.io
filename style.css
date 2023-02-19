@@ -1,0 +1,21 @@
+
+body {
+  background-image: url('https://picsum.photos/seed/picsum/1920/1080'); /* arka plan resmi */
+  background-size: cover; /* arka plan resminin boyutunu sayfaya göre ayarla */
+  background-position: center; /* arka plan resminin konumunu ayarla */
+  background-repeat: no-repeat; /* arka plan resminin tekrarlanmasını önle */
+  background-color: rgba(0, 0, 0, 0.5); /* arka plan rengini ayarla */
+}
+
+* {
+  zoom: 95%;
+}
+
+
+.modal-backdrop {
+  zoom: 200%;
+}
+
+.fade-show {
+  zoom: 1%;
+}
