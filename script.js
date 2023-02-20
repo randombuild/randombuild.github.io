@@ -79,7 +79,6 @@ function showImages() {
       "k5/34.png",
       "k5/35.png",
       "k5/36.png",
-      "k5/37.png",
       "k5/38.png",
       "k5/39.png",
       "k5/40.png",
@@ -329,14 +328,11 @@ function spel() {
     "spel/k1/2.png",
     "spel/k1/3.png",
     "spel/k1/4.png",
-    "spel/k1/5.png",
 
     "spel/k2/1.png",
     "spel/k2/2.png",
     "spel/k2/3.png",
     "spel/k2/4.png",
-    "spel/k2/5.png",
-
 
   ];
 
@@ -408,8 +404,22 @@ const descriptions = [
  " Dans edecekler, şarkı söyleyecekler, can verecekler. -Jhin",
  " Nihayet, gösteri başlıyor. -Jhin",
  " Sisin ötesinde beni bekliyor. Kraliçem, aşkım, kırık kalbimin sahibi. -Viego",
- " Barış en büyük yalan. -Aarox",
- " Barış en büyük yalan. -Akali"  
+ " Barış en büyük yalan. -Aatrox",
+ " Barış en büyük yalan. -Akali",
+ " Ölüm de rüzgar gibidir, hep yanı başımda. -Yasuo",  
+ " Bir yaprağın tek görevi dökülmek mi? -Yasuo", 
+ " Beni öldürmeye mi geldin? Keşke adam toplasaydın. -Yasuo", 
+ " Pişmanlık seni yavaşlatır! Ruh açıkta. Yone", 
+ " Masum bir ruh. Bunların var olduğunu unutuyordum. -Yone", 
+ " Yavru kurt Teemo göreve hazır! -Teemo", 
+ " Bunların boyu uzun ama aklı kısa -Teemo", 
+ " Beni hiç seçmeyeceksin sanmıştım. -Amumu", 
+ " İnsanoğlunun sonu geldi. -Blitzcrank", 
+ " İşleyen golem pas tutmaz. -Blitzcrank", 
+ " Korkuyla titre et yığını! -Blitzcrank", 
+ " Son sahnemi uzun zamandır planlıyorum. Hem de çok ama çok uzun zamandır. -Jhin", 
+ " DİSCORD : https://discord.gg/RnsZJBwfzX",
+ " DİSCORD : https://discord.gg/RnsZJBwfzX", 
 
 
 ];
@@ -417,3 +427,5 @@ const descriptions = [
 const description = document.getElementById("random-description");
 const randomIndex = Math.floor(Math.random() * descriptions.length);
 description.textContent = descriptions[randomIndex];
+
+
