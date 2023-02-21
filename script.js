@@ -41,72 +41,66 @@ function showImages() {
       "k2/6.png",
       "k2/7.png",
 
-      "k3/1.png",
-      "k3/2.png",
-      "k3/3.png",
-      "k3/4.png", 
-      "k3/5.png",
-      "k3/6.png",
-      "k3/7.png",
-      "k3/8.png",
-      "k3/9.png",
-      "k3/10.png",
-      "k3/11.png",
-      "k3/12.png",
-      "k3/13.png",
-      "k3/14.png",
-      "k3/15.png",
-      "k3/65.png",
+      "k3/003.png",
+      "k3/005.png",
+      "k3/007.png",
+      "k3/008.png", 
+      "k3/017.png",
+      "k3/019.png",
+      "k3/021.png",
+      "k3/026.png",
+      "k3/034.png",
+      "k3/039.png",
+      "k3/040.png",
+      "k3/047.png",
+      "k3/049.png",
+      "k3/055.png",
+      "k3/060.png",
+      
+      "k4/001.png",
+      "k4/009.png",
+      "k4/011.png",
+      "k4/013.png",
+      "k4/018.png",
+      "k4/020.png",
+      "k4/023.png",
+      "k4/024.png",
+      "k4/028.png",
+      "k4/033.png",
+      "k4/043.png",
+      "k4/046.png",
+      "k4/051.png",
+      "k4/057.png",
 
-      "k4/16.png",
-      "k4/17.png",
-      "k4/18.png",
-      "k4/19.png",
-      "k4/20.png",
-      "k4/21.png",
-      "k4/22.png",
-      "k4/23.png",
-      "k4/24.png",
-      "k4/25.png",
-      "k4/26.png",
-      "k4/27.png",
-      "k4/28.png",
-      "k4/29.png",
-      "k4/30.png",
-      "k4/31.png",
+      "k5/002.png",
+      "k5/006.png",
+      "k5/014.png",
+      "k5/015.png",
+      "k5/016.png",
+      "k5/022.png",
+      "k5/025.png",
+      "k5/030.png",
+      "k5/032.png",
+      "k5/035.png",
+      "k5/042.png",
+      "k5/053.png",
+      "k5/061.png",
 
-      "k5/33.png",
-      "k5/34.png",
-      "k5/35.png",
-      "k5/36.png",
-      "k5/38.png",
-      "k5/39.png",
-      "k5/40.png",
-      "k5/41.png",
-      "k5/42.png",
-      "k5/43.png",
-      "k5/44.png",
-      "k5/45.png",
-      "k5/46.png",
-      "k5/47.png",
-
-      "k6/49.png",
-      "k6/50.png",
-      "k6/51.png",
-      "k6/52.png",
-      "k6/53.png",
-      "k6/54.png",
-      "k6/55.png",
-      "k6/56.png",
-      "k6/57.png",
-      "k6/58.png",
-      "k6/59.png",
-      "k6/60.png",
-      "k6/61.png",
-      "k6/62.png",
-      "k6/63.png",
-      "k6/64.png",
-
+      "k6/004.png",
+      "k6/010.png",
+      "k6/012.png",
+      "k6/027.png",
+      "k6/029.png",
+      "k6/031.png",
+      "k6/037.png",
+      "k6/041.png",
+      "k6/044.png",
+      "k6/045.png",
+      "k6/050.png",
+      "k6/052.png",
+      "k6/054.png",
+      "k6/058.png",
+      "k6/062.png",
     ];
   
     const selectedImages = [];
@@ -429,3 +423,20 @@ const randomIndex = Math.floor(Math.random() * descriptions.length);
 description.textContent = descriptions[randomIndex];
 
 
+
+var playButton = document.getElementById("play-button");
+var gifContainer = document.getElementById("gif-container");
+var myAudio = document.getElementById("my-audio");
+
+playButton.addEventListener("click", function() {
+  gifContainer.style.display = "block";
+  myAudio.play();
+  playButton.style.display = "none";
+  
+  setTimeout(function() {
+    gifContainer.style.display = "none";
+    myAudio.pause();
+    myAudio.currentTime = 0;
+    playButton.style.display = "block";
+  }, 4300);
+});
