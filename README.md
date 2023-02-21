@@ -1,2 +1,2 @@
 # randombuild.github.io
-random item and champions
+League Of Legends random item and champions
